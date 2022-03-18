@@ -1,8 +1,8 @@
-# cw3
-
+---
+permalink: ./public/index.html
 ---
 
-## permalink: ./public/index.html
+# cw3
 
 ## Project setup
 
