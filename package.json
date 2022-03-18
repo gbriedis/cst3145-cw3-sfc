@@ -5,11 +5,13 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "node scripts/gh-pages-deploy.js"
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "vue": "^3.2.13",
+    "execa": "latest"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -29,13 +31,11 @@
       "plugin:vue/vue3-essential",
       "eslint:recommended"
     ],
-    
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
     "rules": {
       "no-unused-vars": "off"
-      
     }
   },
   "browserslist": [
