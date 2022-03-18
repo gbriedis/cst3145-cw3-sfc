@@ -1,22 +1,22 @@
 <template>
-  <div id="app">
-    <div id="container" class="min-h-screen max-w-5xl my-0 mx-auto">
-        <!-- Display navbar component -->
-        <NavbarComp :cart='this.cart.length' @goCheckout='checkout'/> 
-        
-        <!-- If show lessons is active display lessons and refine search block -->
-        <div class="flex flex-row mt-24 mb-24" v-if='showLesson == true'>
-          <RefineComp />
-          <LessonsComp :lessons="lessons" @addProduct='addToCart'/>
-        </div>
-        
-        <!-- Show Checkout -->
-        <div v-if='showLesson == false'>
-          <CheckoutComp />
-        </div>
   
-    </div>
+  <div id="container" class="min-h-screen max-w-5xl my-0 mx-auto">
+      <!-- Display navbar component -->
+      <NavbarComp :cart='this.cart.length' @goCheckout='checkout'/> 
+      
+      <!-- If show lessons is active display lessons and refine search block -->
+      <div class="flex flex-row mt-24 mb-24" v-if='showLesson == true'>
+        <RefineComp />
+        <LessonsComp :lessons="lessons" @addProduct='addToCart'/>
+      </div>
+      
+      <!-- Show Checkout -->
+      <div v-if='showLesson == false'>
+        <CheckoutComp />
+      </div>
+
   </div>
+
 </template>
 
 <script >
